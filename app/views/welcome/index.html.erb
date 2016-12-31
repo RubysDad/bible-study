@@ -1,2 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Still waters</p>
+<% if current_user %>
+<div class="jumbotron">
+    <div class="row">
+      <p class="caption">As the hart panteth after the water brooks, so panteth my soul after thee, O God...</p>
+    </div>
+</div>
+<% else %>
+<div class="jumbotron">
+    <div class="row">
+      <p class="caption">As the hart panteth after the water brooks, so panteth my soul after thee, O God...</p>
+    </div>
+</div>
+<% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :prayers
+  resources :sermons
   devise_for :users
   get 'welcome/index' => 'welcome#index'
    root 'welcome#index'
