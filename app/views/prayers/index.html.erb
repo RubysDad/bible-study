@@ -5,22 +5,16 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @prayers.each do |prayer| %>
       <tr>
-        <td><%= link_to prayer.id, prayer_path(prayer) %></td>
-        <td><%= prayer.name %></td>
+        <td><%= link_to prayer.name, prayer_path(prayer) %></td>
         <td><%= prayer.description %></td>
-        <td><%= prayer.user_id %></td>
-        <td><%=l prayer.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_prayer_path(prayer), :class => 'btn btn-default btn-xs' %>
